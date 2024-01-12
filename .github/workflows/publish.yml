@@ -19,7 +19,6 @@ jobs:
       - name: Build
         run: npm run build # The build command of your project
 
-        # Push the build to another branch
       - name: Push
         uses: s0/git-publish-subdir-action@develop
         env:
