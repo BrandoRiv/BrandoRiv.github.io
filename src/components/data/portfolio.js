@@ -20,5 +20,16 @@ export default [
         link: 'https://www.google.com',
         github: 'https://github.com',
 
-    }
+    },
+    {
+        id: 3,
+        title: 'Portfolio Website',
+        subtitle: 'Project 3 subtitle',
+        image: '',
+        stack: ['HTML', 'CSS', 'JavaScript'],
+        description: 'Project 3 description',
+        link: 'https://www.google.com',
+        github: 'https://github.com',
+
+    },
 ]
