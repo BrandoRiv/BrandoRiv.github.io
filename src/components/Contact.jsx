@@ -26,10 +26,7 @@ function Contact() {
 						placeholder="Message"
 						className="border-2 border-stone-200 rounded-md p-2 mb-2"
 					/>
-					<button
-						type="submit"
-						className="bg-stone-900 text-white font-semibold p-2 rounded-md"
-					>
+					<button type="submit" className="bg-stone-900 text-white font-semibold p-2 rounded-md">
 						Send
 					</button>
 				</form>

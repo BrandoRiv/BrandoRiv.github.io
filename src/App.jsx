@@ -5,18 +5,21 @@ import Timeline from "./components/Timeline";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 function App() {
 	const [count, setCount] = useState(0);
 
 	return (
-		<>
-			<Intro />
-			<Portfolio />
-			<Timeline />
-			<Contact />
-			<Footer />
-		</>
+		<div>
+			<>
+				<Navbar />
+				<Intro />
+				<Portfolio />
+				<Contact />
+				<Footer />
+			</>
+		</div>
 	);
 }
 
