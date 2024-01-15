@@ -5,24 +5,24 @@ function Contact() {
 		<div className="flex flex-col mb-10 mx-auto">
 			<div className="flex justify-center items-center">
 				<form
-					action="https://getform.io/slug"
+					action="http://localhost:3000/submit-form" // Updated to point to your server
 					method="POST"
 					className="flex flex-col w-full md:w-7/12"
 				>
 					<input
 						type="text"
-						name="name"
+						name="name" // Matches the server-side script
 						placeholder="Name"
 						className="border-2 border-stone-200 rounded-md p-2 mb-2"
 					/>
 					<input
 						type="email"
-						name="email"
+						name="user_email" // Updated to match the server-side script
 						placeholder="Email"
 						className="border-2 border-stone-200 rounded-md p-2 mb-2"
 					/>
 					<textarea
-						name="message"
+						name="message" // Matches the server-side script
 						placeholder="Message"
 						className="border-2 border-stone-200 rounded-md p-2 mb-2"
 					/>

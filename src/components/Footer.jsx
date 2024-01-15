@@ -4,7 +4,7 @@ const Footer = () => {
 	const year = new Date().getFullYear();
 
 	return (
-		<div className="flex flex-col items-center justify-center mx-auto py-5 bg-zinc-700 text-slate-300">
+		<div className="flex flex-col h-screen items-center justify-center mx-auto mb-auto py-5 bg-zinc-700 text-slate-300">
 			<div className="mb-2">
 				{" "}
 				{/* Margin bottom to space out links from the footer text */}
