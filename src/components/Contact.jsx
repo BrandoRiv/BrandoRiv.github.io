@@ -2,8 +2,8 @@ import React from "react";
 
 function Contact() {
 	return (
-		<div className="flex flex-col mb-10 mx-auto">
-			<div className="flex justify-center items-center">
+		<div className="flex flex-col md:flex-row items-center justify-center">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 				<form
 					action="http://localhost:3000/submit-form" // Updated to point to your server
 					method="POST"
