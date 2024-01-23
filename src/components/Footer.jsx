@@ -4,25 +4,25 @@ const Footer = () => {
 	const year = new Date().getFullYear();
 
 	return (
-		<div className="flex flex-col h-screen items-center justify-center mx-auto mb-auto py-5 bg-zinc-700 text-slate-300">
-			<div className="mb-2">
-				{" "}
-				{/* Margin bottom to space out links from the footer text */}
-				<a href="https://example.com" className="mx-2">
-					LinkedIn
-				</a>{" "}
-				{/* Added horizontal margin */}
-				<a href="https://example.com" className="mx-2">
-					GitHub
-				</a>
-				<a href="https://example.com" className="mx-2">
-					Twitter
-				</a>
-			</div>
-			<footer>
+		<footer className="w-full bg-zinc-700 text-slate-300 py-5">
+			<div className="container mx-auto flex flex-col items-center justify-center">
+				<div className="mb-4">
+					{" "}
+					{/* Adjusted margin for better spacing */}
+					<a href="https://example.com" className="mx-2 hover:text-slate-100">
+						LinkedIn
+					</a>{" "}
+					{/* Added hover effect */}
+					<a href="https://example.com" className="mx-2 hover:text-slate-100">
+						GitHub
+					</a>
+					<a href="https://example.com" className="mx-2 hover:text-slate-100">
+						Twitter
+					</a>
+				</div>
 				<p>&copy; {year} Brandon Rivera. All rights reserved.</p>
-			</footer>
-		</div>
+			</div>
+		</footer>
 	);
 };
 

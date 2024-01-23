@@ -1,35 +1,47 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
-	const [showNav, setShowNav] = useState(true);
-	let hideNavTimeout;
-
-	const handleScroll = () => {
-		setShowNav(true);
-		clearTimeout(hideNavTimeout);
-		hideNavTimeout = setTimeout(() => setShowNav(false), 3000);
-	};
+	const [activeItem, setActiveItem] = useState("");
 
 	useEffect(() => {
-		window.addEventListener("scroll", handleScroll);
+		setActiveItem(window.location.hash);
+
+		const handleHashChange = () => {
+			setActiveItem(window.location.hash);
+		};
+
+		window.addEventListener("hashchange", handleHashChange);
+
 		return () => {
-			window.removeEventListener("scroll", handleScroll);
-			clearTimeout(hideNavTimeout);
+			window.removeEventListener("hashchange", handleHashChange);
 		};
 	}, []);
 
 	return (
-		<div
-			onMouseEnter={() => setShowNav(true)}
-			onMouseLeave={() => setShowNav(false)}
-			className={`fixed top-0 w-full ${
-				showNav ? "translate-y-0" : "-translate-y-full"
-			} transition-transform duration-350 ease-in-out`}
-		>
-			<nav class="flex items-center justify-end bg-teal-500 p-6">
-				{/* Rest of your code */ 78908}
-			</nav>
-		</div>
+		<nav className="fixed top-0 w-full bg-teal-500 p-6">
+			<ul className="flex justify-end space-x-4">
+				<li className={activeItem === "#intro" ? "underline" : ""}>
+					<a href="#home" className="text-white">
+						Home
+					</a>
+				</li>
+				<li className={activeItem === "#about" ? "underline" : ""}>
+					<a href="#about" className="text-white">
+						About
+					</a>
+				</li>
+				<li className={activeItem === "#portfolio" ? "underline" : ""}>
+					<a href="#portfolio" className="text-white">
+						Portfolio
+					</a>
+				</li>
+				<li className={activeItem === "#contact" ? "underline" : ""}>
+					<a href="#contact" className="text-white">
+						Contact
+					</a>
+				</li>
+			</ul>
+		</nav>
 	);
 };
 

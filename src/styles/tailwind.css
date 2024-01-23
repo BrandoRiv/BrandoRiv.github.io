@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes scroll {
+	0%,
+	20% {
+		transform: translateY(0);
+	}
+	25%,
+	45% {
+		transform: translateY(-25%);
+	}
+	50%,
+	70% {
+		transform: translateY(-50%);
+	}
+	75%,
+	95% {
+		transform: translateY(-75%);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
+}
+
+.animate-scroll {
+	animation: scroll 20s linear infinite;
+	position: absolute;
+	width: 100%;
+}
