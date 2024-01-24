@@ -1,13 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const Navbar = () => {
-	const [activeItem, setActiveItem] = useState("");
+	const [activeItem, setActiveItem] = useState(window.location.hash);
+	const [underlineStyle, setUnderlineStyle] = useState({});
+	const navItemsRef = useRef({});
+	const underlineWidth = 50;
+
+	const updateUnderline = (hash) => {
+		const item = navItemsRef.current[hash];
+		if (item) {
+			const itemWidth = item.offsetWidth;
+			const leftPosition = item.offsetLeft + (itemWidth - underlineWidth) / 2;
+			setUnderlineStyle({
+				left: leftPosition,
+				width: underlineWidth,
+			});
+		}
+	};
 
 	useEffect(() => {
-		setActiveItem(window.location.hash);
+		updateUnderline(activeItem);
 
 		const handleHashChange = () => {
-			setActiveItem(window.location.hash);
+			const newHash = window.location.hash;
+			setActiveItem(newHash);
+			updateUnderline(newHash);
 		};
 
 		window.addEventListener("hashchange", handleHashChange);
@@ -15,32 +32,32 @@ const Navbar = () => {
 		return () => {
 			window.removeEventListener("hashchange", handleHashChange);
 		};
-	}, []);
+	}, [activeItem]);
 
 	return (
-		<nav className="fixed top-0 w-full bg-teal-500 p-6">
-			<ul className="flex justify-end space-x-4">
-				<li className={activeItem === "#intro" ? "underline" : ""}>
-					<a href="#home" className="text-white">
-						Home
-					</a>
-				</li>
-				<li className={activeItem === "#about" ? "underline" : ""}>
-					<a href="#about" className="text-white">
-						About
-					</a>
-				</li>
-				<li className={activeItem === "#portfolio" ? "underline" : ""}>
-					<a href="#portfolio" className="text-white">
-						Portfolio
-					</a>
-				</li>
-				<li className={activeItem === "#contact" ? "underline" : ""}>
-					<a href="#contact" className="text-white">
-						Contact
-					</a>
-				</li>
+		<nav className="fixed top-0 w-full p-6 bg-white z-10">
+			<ul className="flex justify-end space-x-4 md:space-x-6 lg:space-x-8">
+				{["#home", "#about", "#portfolio", "#contact"].map((hash) => (
+					<li
+						key={hash}
+						ref={(el) => (navItemsRef.current[hash] = el)}
+						className="text-lg font-medium"
+					>
+						<a
+							href={hash}
+							className={`hover:text-teal-500 ${
+								activeItem === hash ? "text-teal-500" : "text-gray-700"
+							}`}
+						>
+							{hash.slice(1).charAt(0).toUpperCase() + hash.slice(2)}
+						</a>
+					</li>
+				))}
 			</ul>
+			<div
+				className="absolute bottom-5 h-[2px] bg-gradient-to-r from-transparent via-black to-transparent"
+				style={{ ...underlineStyle, transition: "left 0.3s" }}
+			/>
 		</nav>
 	);
 };

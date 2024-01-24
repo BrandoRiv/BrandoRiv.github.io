@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./styles/tailwind.css";
-import "./styles/custom.css";
 import Intro from "./components/Intro";
 import Timeline from "./components/Timeline";
 import Portfolio from "./components/Portfolio";
