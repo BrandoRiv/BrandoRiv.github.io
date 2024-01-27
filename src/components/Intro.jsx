@@ -13,7 +13,7 @@ function Intro() {
 
 	return (
 		<div className="flex flex-col md:flex-row justify-center items-center min-h-screen p-8">
-			<div className="order-first lg:order-1 md:order-1 sm:order-0 w-64 h-64 md:w-96 md:h-96 bg-gray-400 flex items-center justify-center mb-4 md:mb-0 z-10 px-8 aspect-square">
+			<div className="order-first lg:order-1 md:order-1 sm:order-0 w-64 h-64 md:w-96 md:h-96 bg-gray-400 flex items-center justify-center mb-4 md:mb-0 px-8 aspect-square">
 				<span>Photo</span>
 			</div>
 			<div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-x-6 w-full max-w-4xl text-center md:text-left">
