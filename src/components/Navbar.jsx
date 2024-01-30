@@ -35,8 +35,12 @@ const Navbar = () => {
 	}, [activeItem]);
 
 	return (
-		<nav className="fixed top-0 w-full p-6 bg-white z-10">
+		<nav className="fixed top-0 w-full p-6 z-10 flex items-center justify-between">
+			<div className="align-left pl-5">
+				<img src="src\assets\froglogo.png" alt="logo" className="h-10 w-10" />
+			</div>
 			<ul className="flex justify-end space-x-4 md:space-x-6 lg:space-x-8">
+				<li className="align-left"></li>
 				{["#home", "#about", "#portfolio", "#contact"].map((hash) => (
 					<li
 						key={hash}
@@ -61,5 +65,4 @@ const Navbar = () => {
 		</nav>
 	);
 };
-
 export default Navbar;

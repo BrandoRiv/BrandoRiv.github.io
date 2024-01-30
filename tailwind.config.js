@@ -7,14 +7,8 @@ export default {
 			fontFamily: {
 				inter: ["inter", "serif"],
 			},
-			keyframes: {
-				scroll: {
-					"0%": { transform: "translateY(0)" },
-					"100%": { transform: "translateY(-100%)" },
-				},
-			},
-			animation: {
-				scroll: "scroll 30s linear infinite",
+			backgroundImage: {
+				"subtle-gradient": "linear-gradient(to bottom, #FBFAF5, #f0ebe6)",
 			},
 		},
 	},

@@ -12,9 +12,9 @@ function App() {
 	const [count, setCount] = useState(0);
 
 	return (
-		<div>
+		<div className="bg-gradient-to-b from-[#FBFAF5] to-[#f0ebe6]">
 			<Navbar />
-			<div id="home">
+			<div id="intro">
 				<Intro />
 			</div>
 			<div id="about">
