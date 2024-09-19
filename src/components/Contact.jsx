@@ -7,6 +7,7 @@ export default function Contact() {
 	  event.preventDefault();
 	  setResult("Sending....");
 	  const formData = new FormData(event.target);
+	  console.log(import.meta.env.WEB3FORMS_ACCESS_KEY);
   
 	  formData.append("access_key", process.env.WEB3FORMS_ACCESS_KEY);
   
