@@ -37,11 +37,11 @@ const Navbar = () => {
 	return (
 		<nav className="fixed top-0 w-full p-6 z-10 flex items-center justify-between">
 			<div className="align-left pl-5">
-				<img src="src\assets\froglogo.png" alt="logo" className="h-10 w-10" />
+				{"<Brandon Rivera />"}
 			</div>
 			<ul className="flex justify-end space-x-4 md:space-x-6 lg:space-x-8">
 				<li className="align-left"></li>
-				{["#home", "#about", "#portfolio", "#contact"].map((hash) => (
+				{["#home", "#about", "#projects", "#contact"].map((hash) => (
 					<li
 						key={hash}
 						ref={(el) => (navItemsRef.current[hash] = el)}
