@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./styles/tailwind.css";
 import Intro from "./components/Intro";
 import Timeline from "./components/Timeline";
-import Portfolio from "./components/Portfolio";
+import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -26,8 +26,8 @@ function App() {
 			<div id="about">
 			  <About />
 			</div>
-			<div id="portfolio">
-			  <Portfolio />
+			<div id="Projects">
+			  <Projects />
 			</div>
 			<div id="contact">
 			  <Contact />

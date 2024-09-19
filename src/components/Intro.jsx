@@ -8,10 +8,7 @@ function Intro() {
 		<div className="flex justify-center items-center min-h-screen h-screen">
 			<div>
 				<div className="text-black text-6xl lg:text-8xl font-bold text-center tracking-wider">
-					BRANDON
-				</div>
-				<div className="outline-text text-6xl lg:text-8xl font-bold text-center tracking-wider">
-					RIVERA
+					App development. Web Design. Strategy. Microservice Architecture. Analytics. And More.
 				</div>
 			</div>
 		</div>
