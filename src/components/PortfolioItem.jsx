@@ -1,67 +1,53 @@
 import React from "react";
 
-function PortfolioItem({ title, subtitle, image, stack, description, link }) {
+function PortfolioItem({ title, subtitle, image, stack, description, link, github }) {
   return (
-    <article className="flex bg-white transition hover:shadow-xl">
-      {/* Vertical time section */}
-      <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
-        <time
-          dateTime="2022-10-10"
-          className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
+    <div className="bg-gray-200 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      {/* Image section */}
+      {image ? (
+        <img src={image} alt={title} className="w-full h-48 object-cover rounded-lg mb-4" />
+      ) : (
+        <div className="w-full h-48 bg-gray-400 flex items-center justify-center rounded-lg mb-4">
+          <span className="text-white">No Image Available</span>
+        </div>
+      )}
+
+      {/* Content section */}
+      <h2 className="text-xl font-bold mb-2">{title}</h2>
+      <h3 className="text-md text-gray-700 mb-4">{subtitle}</h3>
+
+      {/* Stack */}
+      <div className="flex space-x-2 mb-4">
+        {stack.map((tech, index) => (
+          <span key={index} className="bg-gray-300 text-gray-800 py-1 px-2 rounded text-sm">
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      {/* Description */}
+      <p className="text-gray-600 mb-4">{description}</p>
+
+      {/* Links */}
+      <div className="flex justify-between">
+        <a
+          href={link}
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+          target="_blank"
+          rel="noreferrer"
         >
-          <span>{new Date().getFullYear()}</span>
-          <span className="w-px flex-1 bg-gray-900/10"></span>
-          <span>Oct 10</span> {/* Replace with dynamic date if necessary */}
-        </time>
+          View Project
+        </a>
+        <a
+          href={github}
+          className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900 transition"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
       </div>
-
-      {/* Left Image Section */}
-      <div className="hidden sm:block sm:basis-56">
-        <img
-          alt={title}
-          src={image}
-          className="aspect-square h-full w-full object-cover"
-        />
-      </div>
-
-      {/* Content Section */}
-      <div className="flex flex-1 flex-col justify-between">
-        <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
-          <a href={link}>
-            <h3 className="font-bold uppercase text-gray-900">{title}</h3>
-          </a>
-
-          <h6 className="mt-2 text-sm font-medium text-gray-600">{subtitle}</h6>
-
-          {/* Stack */}
-          <div className="mt-2">
-            {stack.map((item, index) => (
-              <span
-                key={index}
-                className="inline-block text-sm text-gray-600 p-1 lowercase italic"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-
-          {/* Description */}
-          <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-            {description}
-          </p>
-        </div>
-
-        {/* Call-to-action */}
-        <div className="sm:flex sm:items-end sm:justify-end">
-          <a
-            href={link}
-            className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
-          >
-            View Project
-          </a>
-        </div>
-      </div>
-    </article>
+    </div>
   );
 }
 
