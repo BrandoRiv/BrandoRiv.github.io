@@ -1,5 +1,5 @@
 import React from "react";
-import aboutData from "../data/about"; // Adjust the import path if necessary
+import aboutData from "./data/about";
 
 const About = () => {
 	const { contact, about, skills, disciplines } = aboutData;
