@@ -26,18 +26,37 @@ export default function Contact() {
 	  }
 	};
   
-	return (
-	  <div>
-		<form onSubmit={onSubmit}>
-		  <input type="text" name="name" required/>
-		  <input type="email" name="email" required/>
-		  <textarea name="message" required></textarea>
-  
-		  <button type="submit">Submit Form</button>
-  
-		</form>
-		<span>{result}</span>
-  
-	  </div>
-	);
-  }
+  return (
+    <div className="flex flex-col md:flex-row items-center justify-center w-full h-screen px-5">
+      <form onSubmit={onSubmit} className="flex flex-col w-full md:w-7/12">
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          className="border-2 border-stone-200 rounded-md p-2 mb-2"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          className="border-2 border-stone-200 rounded-md p-2 mb-2"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Message"
+          className="border-2 border-stone-200 rounded-md p-2 mb-2"
+          required
+        />
+        <button
+          type="submit"
+          className="bg-stone-900 text-white font-semibold p-2 rounded-md"
+        >
+          Send
+        </button>
+      </form>
+      <span>{result}</span>
+    </div>
+  );
+}
