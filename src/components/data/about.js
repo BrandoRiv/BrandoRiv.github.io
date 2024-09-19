@@ -17,13 +17,13 @@ export default {
     },
 
     disciplines: [
-        "Software Development",
-        "Web Development",
-        "Full-Stack Development",
-        "Mobile App Development",
-        "Database Management",
+        "Software Engineering",
+        "Web and Mobile Solutions",
+        "Full-Stack Application Design",
+        "Microservices Architecture",
+        "Data Analysis and Management",
         "Cloud Computing",
-        "Agile Methodology"
+        "Agile Project Management"
       ],
     
     experience: [
