@@ -7,7 +7,7 @@ function Portfolio() {
     <div className="flex flex-col h-screen">
       <h1 className="text-3xl font-bold text-center my-8">Projects</h1>
       <div className="flex flex-col gap-4 px-8 py-9 h-full bg-slate-500">
-        {portfolioData.map((item) => (
+        {portfolioData.map((item, index) => (
           <PortfolioItem
             key={item.id}
             title={item.title}
@@ -19,6 +19,7 @@ function Portfolio() {
             github={item.github}
             startDate={item.startDate}
             endDate={item.endDate}
+            index={index}
           />
         ))}
       </div>
