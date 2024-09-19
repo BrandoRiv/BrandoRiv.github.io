@@ -6,8 +6,9 @@ const Footer = () => {
 	return (
 		<footer className="bg-white md:flex md:items-center md:justify-between shadow rounded-lg p-4 md:p-6 xl:p-8 my-6 mx-4">
 			<ul className="flex items-center flex-wrap mb-6 md:mb-0">
+			<li>brandoriv.dev</li>
 			<li>
-        		<span className="text-sm font-normal text-gray-500">© {new Date().getFullYear()} <a href="https://brandoriv.dev" className="hover:underline">brandoriv.dev</a>. All rights reserved.</span>
+        		<span className="text-sm font-normal text-gray-500">© Brandon Rivera{new Date().getFullYear()}. All rights reserved.</span>
     		</li>
 			</ul>
 			<div className="flex sm:justify-center space-x-6">
