@@ -20,7 +20,7 @@ const Footer = () => {
 						Twitter
 					</a>
 				</div>
-				<p>&copy; {year} Test change. All rights reserved.</p>
+				<p>&copy; {year} Brandon Rivera. All rights reserved.</p>
 			</div>
 		</footer>
 	);
