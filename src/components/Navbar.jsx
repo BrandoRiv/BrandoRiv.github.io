@@ -37,7 +37,9 @@ const Navbar = () => {
 	return (
 		<nav className="fixed top-0 w-full p-6 z-10 flex items-center justify-between">
 			<div className="align-left pl-5">
-				{"<Brandon Rivera />"}
+				<span className="text-xl font-bold italic mix-blend-difference">
+					{"<Brandon Rivera />"}
+				</span>
 			</div>
 			<ul className="flex justify-end space-x-4 md:space-x-6 lg:space-x-8">
 				<li className="align-left"></li>

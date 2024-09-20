@@ -5,10 +5,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				inter: ["inter", "serif"],
-			},
-			backgroundImage: {
-				"subtle-gradient": "linear-gradient(to bottom, #FBFAF5, #f0ebe6)",
+				header: ["Lora", "serif"],
+				body: ["Merriweather", "serif"],
 			},
 		},
 	},
