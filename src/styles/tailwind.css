@@ -1,8 +1,20 @@
-/* FILEPATH: /c:/Users/Brandon/Desktop/Portfolio Website/BrandoRiv.github.io/src/components/styles/tailwind.css */
-
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow-x: hidden; /* Prevent horizontal scroll */
+	overscroll-behavior: contain; /* Prevent rubber-banding effect on mobile devices */
+}
+
+body {
+	min-height: 100vh;
+	overflow-y: auto; /* Control vertical scrolling */
+}
 
 html {
 	scroll-behavior: smooth;

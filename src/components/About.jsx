@@ -72,7 +72,7 @@ const About = () => {
 						<h2 id="about-section-title" className="text-3xl font-bold sm:text-4xl">
 							About Me
 						</h2>
-						<p className="mt-4 text-gray-600">{about}</p>
+						<p className="mt-4 text-gray-600 text-lg">{about}</p>
 
 						{/* Disciplines Section */}
 						<h4 className="mt-6 text-2xl font-bold">Disciplines</h4>

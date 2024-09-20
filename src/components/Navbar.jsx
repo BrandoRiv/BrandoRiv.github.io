@@ -37,12 +37,13 @@ const Navbar = () => {
 	return (
 		<nav className="fixed top-0 w-full p-6 z-10 flex items-center justify-between">
 			<div className="align-left pl-5">
-				<span className="text-xl font-bold italic mix-blend-difference">
+				<span className="text-xl font-bold italic mix-blend-difference transform sm:rotate-90 sm:origin-left">
+					{" "}
+					{/* Added rotate-90 for mobile */}
 					{"<Brandon Rivera />"}
 				</span>
 			</div>
 			<ul className="flex justify-end space-x-4 md:space-x-6 lg:space-x-8">
-				<li className="align-left"></li>
 				{["#home", "#about", "#projects", "#contact"].map((hash) => (
 					<li
 						key={hash}
@@ -67,4 +68,5 @@ const Navbar = () => {
 		</nav>
 	);
 };
+
 export default Navbar;

@@ -42,7 +42,7 @@ export default {
 		"Software Development",
 		"Web and Mobile Solutions",
 		"Full-Stack Application Design",
-		"Microservices Architecture",
+		"Microservice Architecture",
 		"Data Analysis and Management",
 		"Cloud Computing",
 		"Agile Project Management",

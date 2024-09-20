@@ -7,6 +7,10 @@ function Intro() {
 		"Strategy.",
 		"Microservices.",
 		"Analytics.",
+		"Full-Stack Development.",
+		"Cloud Solutions.",
+		"Agile Project Management.",
+		"Data Management.",
 		"& More.",
 	];
 
@@ -34,11 +38,13 @@ function Intro() {
 	}, [entries]);
 
 	return (
-		<div className="flex flex-col justify-center items-center min-h-screen h-screen space-y-6">
+		<div className="flex flex-col justify-center items-center min-h-screen h-screen space-y-4">
+			{" "}
+			{/* Reduced space-y value */}
 			{entries.map((entry, index) => (
 				<div
 					key={index}
-					className={`text-black text-5xl lg:text-8xl font-bold text-center tracking-wide max-w-[90vw] whitespace-nowrap transition-all duration-1000 transform ${
+					className={`text-black text-4xl lg:text-6xl font-bold text-center tracking-wide max-w-[80vw] whitespace-normal break-words transition-all duration-1000 transform ${
 						fadeIns[index] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-5"
 					} ${entry === "& More." ? "italic" : ""}`}
 				>

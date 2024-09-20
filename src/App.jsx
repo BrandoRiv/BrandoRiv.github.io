@@ -9,7 +9,7 @@ import About from "./components/About";
 
 function App() {
 	return (
-		<div className="bg-gradient-to-b from-[#66624e] to-[#a5abac] min-h-screen">
+		<div className="min-h-screen">
 			<Navbar />
 			<div className="flex-grow p-4 space-y-16">
 				{" "}
@@ -27,8 +27,10 @@ function App() {
 				<div id="contact" className="text-3xl">
 					<Contact />
 				</div>
+				<div>
+					<Footer />
+				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 }
