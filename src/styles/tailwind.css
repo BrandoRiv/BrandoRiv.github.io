@@ -7,13 +7,13 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	overflow-x: hidden; /* Prevent horizontal scroll */
-	overscroll-behavior: contain; /* Prevent rubber-banding effect on mobile devices */
+	overflow-x: hidden;
+	overscroll-behavior: contain;
 }
 
 body {
 	min-height: 100vh;
-	overflow-y: auto; /* Control vertical scrolling */
+	overflow-y: auto;
 }
 
 html {
@@ -28,13 +28,13 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	overflow-x: hidden; /* Prevent horizontal scrolling */
+	overflow-x: hidden;
 }
 
 .bg-gradient {
 	background-image: url("../assets/GradientBackground.jpeg");
-	background-size: cover; /* Make the image cover the entire div */
-	background-position: center; /* Center the image */
-	background-repeat: no-repeat; /* Ensure it doesn't repeat */
-	background-attachment: fixed; /* Fixed to create a parallax effect */
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }

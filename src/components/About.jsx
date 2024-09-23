@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import { MailIcon, LinkedInIcon, GithubIcon, TwitterIcon } from "./data/icons.jsx";
 import aboutData from "./data/about";
-import { useIsVisible } from "./hooks/useIsVisible"; // Assuming the hook is in this path
+import { useIsVisible } from "./hooks/useIsVisible";
+import pfp from "../assets/pfp.JPG";
 
 const About = () => {
 	const { contact, about, aboutdisciplines, interests } = aboutData;
@@ -27,7 +28,7 @@ const About = () => {
 							<div className="relative pb-[120%] w-full">
 								<img
 									alt="Developer portrait"
-									src="/src/assets/pfp.JPG"
+									src={pfp}
 									className="absolute inset-0 w-full h-full object-cover rounded-lg"
 								/>
 							</div>
