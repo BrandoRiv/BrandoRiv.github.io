@@ -5,10 +5,16 @@ import Projects from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import backgroundImage from "./assets/GradientBackground.jpeg"; // Import the background image
 
 function App() {
 	return (
-		<div className="min-h-screen bg-gradient bg-cover bg-center lg:bg-fixed text-white">
+		<div
+			className="min-h-screen text-white bg-cover bg-center bg-fixed bg-no-repeat"
+			style={{
+				backgroundImage: `url(${backgroundImage})`,
+			}}
+		>
 			<div className="flex-grow p-4 space-y-16">
 				<div id="intro" className="text-3xl">
 					<Intro />
