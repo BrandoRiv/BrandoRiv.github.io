@@ -5,8 +5,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				header: ["Lora", "serif"],
-				body: ["Merriweather", "serif"],
+				headline: ['"Neue Haas Grotesk Display Pro"', "sans-serif"],
+				body: ['"Urbane"', "serif"],
 			},
 		},
 	},

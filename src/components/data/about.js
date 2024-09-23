@@ -8,7 +8,7 @@ export default {
 		github: "GitHub URL",
 	},
 	about:
-		"Deeply connected to Columbus, I’m a software developer eager to work with local businesses and provide tech-driven solutions to help them grow. I aim to leverage my skills to support organizations in the Greater Columbus area. With a strong background in both front-end and back-end development, I'm excited to collaborate and deliver innovative services that help my community thrive.",
+		"Based in Columbus, I’m a software developer helping local businesses grow through tech-driven solutions. With expertise in full stack development, I deliver innovative services to support organizations in the Greater Columbus area.",
 
 	skills: {
 		languages: [
@@ -39,13 +39,28 @@ export default {
 	},
 
 	disciplines: [
-		"Software Development",
-		"Web and Mobile Solutions",
-		"Full-Stack Application Design",
+		"Software Engineering",
+		"Web Solutions",
+		"Mobile Solutions",
+		"Database Design",
 		"Microservice Architecture",
-		"Data Analysis and Management",
+		"Automation",
 		"Cloud Computing",
-		"Agile Project Management",
+		"UI/UX",
+		"Data Analytics",
+		"Strategy",
+		"Agile Methodologies",
+	],
+
+	aboutdisciplines: [
+		"Full Stack Development",
+		"Web Application Design",
+		"Mobile App Development",
+		"Data Analytics",
+		"Database Architecture",
+		"Process Automation",
+		"UI/UX Design",
+		"Microservice Systems",
 	],
 
 	interests: ["Video Games", "Tennis", "Horror Content", "Hiking", "Technology"],

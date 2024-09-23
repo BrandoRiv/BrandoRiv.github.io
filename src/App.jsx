@@ -1,20 +1,16 @@
-import { useState } from "react";
+import React from "react";
 import "./styles/tailwind.css";
 import Intro from "./components/Intro";
 import Projects from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
 import About from "./components/About";
 
 function App() {
 	return (
-		<div className="min-h-screen">
-			<Navbar />
+		<div className="min-h-screen bg-gradient text-white">
 			<div className="flex-grow p-4 space-y-16">
 				{" "}
-				{/* Applied consistent spacing */}
-				{/* Each component gets a uniform padding */}
 				<div id="intro" className="text-3xl">
 					<Intro />
 				</div>

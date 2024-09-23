@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useIsVisible } from "./hooks/useIsVisible";
 
 export default function Contact() {
 	const [result, setResult] = React.useState("");
+
+	const formRef = useRef();
+
+	const isFormVisible = useIsVisible(formRef);
 
 	const onSubmit = async (event) => {
 		event.preventDefault();
@@ -27,72 +32,79 @@ export default function Contact() {
 	};
 
 	return (
-		<section aria-labelledby="contact-section-title" className="py-12">
-			<div className="mx-auto max-w-screen-md px-4 sm:px-6 lg:px-8">
+		<section aria-labelledby="contact-section-title" className="pt-12">
+			<div
+				ref={formRef}
+				className={`mx-auto max-w-screen-md px-4 sm:px-6 lg:px-8 transition-opacity duration-700 ease-in-out transform ${
+					isFormVisible ? "opacity-100 blur-none" : "opacity-0 blur-sm"
+				}`}
+			>
 				<h2 id="contact-section-title" className="text-3xl font-bold sm:text-4xl">
 					Contact Me
 				</h2>
-				<p className="mt-4 text-gray-600 text-lg">
-					I'd love to hear from you! Please fill out the form below.
+				<p className="mt-4 text-lg">
+					I'd love to hear from you! Please fill out the form below to send me an email.
 				</p>
 
 				<form onSubmit={onSubmit} className="mt-6 space-y-4">
-					<div className="flex flex-col">
+					<div className="flex flex-col text-lg">
 						<label htmlFor="name" className="sr-only">
 							Name
 						</label>
 						<input
 							type="text"
 							name="name"
-							placeholder="Name"
-							className="border-2 border-gray-300 rounded-md p-3"
+							placeholder="name"
+							className="border-2 text-black border-gray-300 rounded-md p-3 text-base placeholder-gray-500"
 							required
 						/>
 					</div>
+					<div className="flex flex-col sm:flex-row sm:space-x-4">
+						<div className="flex flex-col w-full">
+							<label htmlFor="email" className="sr-only">
+								Email
+							</label>
+							<input
+								type="email"
+								name="email"
+								placeholder="email"
+								className="border-2 text-black border-gray-300 rounded-md p-3 text-base placeholder-gray-500"
+								required
+							/>
+						</div>
 
-					<div className="flex flex-col">
-						<label htmlFor="email" className="sr-only">
-							Email
-						</label>
-						<input
-							type="email"
-							name="email"
-							placeholder="Email"
-							className="border-2 border-gray-300 rounded-md p-3"
-							required
-						/>
+						<div className="flex flex-col w-full mt-4 sm:mt-0">
+							<label htmlFor="phone" className="sr-only">
+								Phone
+							</label>
+							<input
+								type="tel"
+								name="phone"
+								placeholder="phone number"
+								className="border-2 text-black border-gray-300 rounded-md p-3 text-base placeholder-gray-500"
+							/>
+						</div>
 					</div>
-
-					<div className="flex flex-col">
-						<label htmlFor="phone" className="sr-only">
-							Phone
-						</label>
-						<input
-							type="tel"
-							name="phone"
-							placeholder="Phone Number"
-							className="border-2 border-gray-300 rounded-md p-3"
-						/>
-					</div>
-
 					<div className="flex flex-col">
 						<label htmlFor="message" className="sr-only">
 							Message
 						</label>
 						<textarea
 							name="message"
-							placeholder="Your message"
-							className="border-2 border-gray-300 rounded-md p-3"
+							placeholder="message"
+							className="border-2 text-black border-gray-300 rounded-md p-3 text-base placeholder-gray-500 h-40"
 							required
 						/>
 					</div>
 
-					<button
-						type="submit"
-						className="bg-blue-600 text-white font-bold p-3 rounded-md hover:bg-blue-700 transition duration-200"
-					>
-						Send Message
-					</button>
+					<div className="flex justify-end">
+						<button
+							type="submit"
+							className="bg-stone-700 text-white font-bold px-4 py-2 rounded-md hover:bg-blue-700 transition duration-200"
+						>
+							send
+						</button>
+					</div>
 				</form>
 				<span className="mt-4 block text-gray-500">{result}</span>
 			</div>

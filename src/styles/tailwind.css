@@ -23,3 +23,18 @@ html {
 ::-webkit-scrollbar {
 	display: none;
 }
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.bg-gradient {
+	background-image: url("../assets/GradientBackground.jpeg");
+	background-size: cover; /* Make the image cover the entire div */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Ensure it doesn't repeat */
+	background-attachment: fixed; /* Fixed to create a parallax effect */
+}

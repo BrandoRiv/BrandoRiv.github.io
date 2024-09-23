@@ -11,26 +11,26 @@ const Footer = () => {
 					<a href="#">brandoriv.dev </a>
 				</li>
 				<li>
-					<span className="text-sm font-normal text-gray-500">
+					<span className="text-sm font-normal">
 						© Brandon Rivera {year}. All rights reserved.
 					</span>
 				</li>
 			</ul>
-			<div className="flex sm:justify-center space-x-6">
+			<div className="flex sm:justify-center sm:items-center space-x-6">
 				{/* Mail icon */}
-				<a href="mailto:brandoriv.dev@gmail.com" className="text-gray-500 hover:text-gray-900">
+				<a href="mailto:brandoriv.dev@gmail.com" className=" hover:text-gray-900">
 					<MailIcon />
 				</a>
 				{/* LinkedIn */}
-				<a href="www.linkedin.com/in/brandoriv" className="text-gray-500 hover:text-gray-900">
+				<a href="www.linkedin.com/in/brandoriv" className="hover:text-gray-900">
 					<LinkedInIcon />
 				</a>
 				{/* Github */}
-				<a href="https://github.com/BrandoRiv" className="text-gray-500 hover:text-gray-900">
+				<a href="https://github.com/BrandoRiv" className="hover:text-gray-900">
 					<GithubIcon />
 				</a>
 				{/* Twitter */}
-				<a href="https://x.com/BrandoRiv" className="text-gray-500 hover:text-gray-900">
+				<a href="https://x.com/BrandoRiv" className="hover:text-gray-900">
 					<TwitterIcon />
 				</a>
 			</div>

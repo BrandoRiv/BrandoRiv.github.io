@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useIsVisible } from "./hooks/useIsVisible";
 
 function PortfolioItem({
 	title,
@@ -11,10 +12,20 @@ function PortfolioItem({
 	startDate,
 	endDate,
 }) {
+	const imageRef = useRef();
+	const contentRef = useRef();
+
+	const isImageVisible = useIsVisible(imageRef);
+	const isContentVisible = useIsVisible(contentRef);
+
 	return (
 		<article className="group flex flex-col w-full max-w-4xl mx-auto mb-12">
-			{/* Image section */}
-			<div className="w-full">
+			<div
+				ref={imageRef}
+				className={`w-full transition-opacity duration-500 ease-in-out transform ${
+					isImageVisible ? "opacity-100 blur-none" : "opacity-0 blur-sm"
+				}`}
+			>
 				<img
 					alt={title}
 					src={image ? image : "/img/default-image.jpg"}
@@ -22,14 +33,19 @@ function PortfolioItem({
 				/>
 			</div>
 
-			{/* Content section */}
-			<div className="p-6">
+			{/* Content section with fade, blur, and delay */}
+			<div
+				ref={contentRef}
+				className={`p-6 transition-opacity duration-700 ease-in-out delay-150 transform ${
+					isContentVisible ? "opacity-100 blur-none" : "opacity-0 blur-sm"
+				}`}
+			>
 				{/* Title and Date Row */}
 				<div className="flex justify-between items-center mb-4">
 					<a href={link} target="_blank" rel="noopener noreferrer">
-						<h3 className="text-2xl font-medium text-gray-900">{title}</h3>
+						<h3 className="text-2xl font-medium">{title}</h3>
 					</a>
-					<div className="text-sm text-gray-600">
+					<div className="text-sm">
 						<p>{startDate}</p>
 						<p>{endDate ? endDate : "Present"}</p>
 					</div>
@@ -45,7 +61,7 @@ function PortfolioItem({
 				</div>
 
 				{/* Description */}
-				<p className="text-lg text-gray-700">{description}</p>
+				<p className="text-base">{description}</p>
 
 				{/* Optional GitHub link */}
 				<div className="flex items-center justify-between mt-4">
@@ -54,7 +70,7 @@ function PortfolioItem({
 							href={github}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="text-sm text-blue-600 hover:underline"
+							className="inline-block text-sm font-bold text-blue-400 italic"
 						>
 							GitHub Repo
 						</a>
