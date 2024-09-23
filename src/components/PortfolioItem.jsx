@@ -30,6 +30,7 @@ function PortfolioItem({
 					alt={title}
 					src={image ? image : "/img/default-image.jpg"}
 					className="h-72 w-full object-cover transition group-hover:grayscale-[50%] rounded-lg"
+					loading="lazy"
 				/>
 			</div>
 
