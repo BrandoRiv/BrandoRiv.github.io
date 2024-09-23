@@ -34,7 +34,9 @@ body {
 .bg-gradient {
 	background-image: url("../assets/GradientBackground.jpeg");
 	background-size: cover;
-	background-position: center;
+	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	width: 100vw;
+	min-height: 100vh;
 }
