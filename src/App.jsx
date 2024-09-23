@@ -9,13 +9,14 @@ import backgroundImage from "./assets/GradientBackground.jpeg"; // Import the ba
 
 function App() {
 	return (
-		<div
-			className="min-h-screen text-white bg-cover bg-center bg-no-repeat bg-fixed md:bg-fixed"
-			style={{
-				backgroundImage: `url(${backgroundImage})`,
-			}}
-		>
-			<div className="flex-grow p-4 space-y-16">
+		<div className="relative min-h-screen text-white">
+			<div
+				className="fixed top-0 left-0 w-full h-full bg-cover bg-center"
+				style={{
+					backgroundImage: `url(${backgroundImage})`,
+				}}
+			></div>
+			<div className="relative z-10 p-4 space-y-16">
 				<div id="intro" className="text-3xl">
 					<Intro />
 				</div>
