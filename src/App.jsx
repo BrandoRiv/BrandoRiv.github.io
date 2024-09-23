@@ -10,7 +10,7 @@ import backgroundImage from "./assets/GradientBackground.jpeg"; // Import the ba
 function App() {
 	return (
 		<div
-			className="min-h-screen text-white bg-cover bg-center bg-fixed bg-no-repeat"
+			className="min-h-screen text-white bg-cover bg-center bg-no-repeat bg-fixed md:bg-fixed"
 			style={{
 				backgroundImage: `url(${backgroundImage})`,
 			}}
