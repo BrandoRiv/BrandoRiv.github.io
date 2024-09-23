@@ -7,8 +7,7 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	overflow-x: hidden;
-	overscroll-behavior: contain;
+	overflow: hidden; /* Prevent any scrolling */
 }
 
 body {
@@ -39,4 +38,11 @@ body {
 	background-attachment: fixed;
 	width: 100vw;
 	min-height: 100vh;
+	overflow: hidden;
+}
+
+@media (max-width: 768px) {
+	.bg-gradient {
+		background-attachment: fixed;
+	}
 }
