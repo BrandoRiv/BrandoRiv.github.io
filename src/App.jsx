@@ -8,9 +8,8 @@ import About from "./components/About";
 
 function App() {
 	return (
-		<div className="min-h-screen bg-gradient text-white">
+		<div className="min-h-screen bg-gradient bg-cover bg-center lg:bg-fixed text-white">
 			<div className="flex-grow p-4 space-y-16">
-				{" "}
 				<div id="intro" className="text-3xl">
 					<Intro />
 				</div>
