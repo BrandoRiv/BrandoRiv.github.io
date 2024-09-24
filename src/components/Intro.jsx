@@ -44,7 +44,7 @@ function Intro() {
 		<div className="flex justify-center items-center h-[90vh] w-full mt-10">
 			<div className="w-[90vw] lg:w-[60vw] flex flex-col items-center justify-center">
 				<h1
-					className={`text-left w-full text-4xl lg:text-6xl font-bold transition-all duration-1000 ease-in-out transform 
+					className={`text-left w-full tracking-wider text-4xl lg:text-6xl font-bold transition-all duration-1000 ease-in-out transform 
             ${fadeIns[0] ? "opacity-100 translate-y-0 blur-0" : "opacity-0 -translate-y-5 blur-xs"} mb-2 lg:mb-4`}
 				>
 					brandoriv.dev
