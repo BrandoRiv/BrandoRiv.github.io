@@ -5,33 +5,43 @@ import Projects from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import backgroundImage from "./assets/GradientBackground.jpeg"; // Import the background image
+import backgroundImage from "./assets/GradientBackground.jpeg";
 
 function App() {
 	return (
-		<div className="relative min-h-screen text-white">
+		<div className="relative min-h-screen text-textColor bg-bgColor">
+			{/* Background Image */}
 			<div
 				className="fixed top-0 left-0 w-full h-full bg-cover bg-center"
 				style={{
 					backgroundImage: `url(${backgroundImage})`,
 				}}
 			></div>
+
+			{/* Content */}
 			<div className="relative z-10 p-4 space-y-16">
-				<div id="intro" className="text-3xl">
+				{/* Intro Section */}
+				<div id="intro" className="text-3xl font-headline">
 					<Intro />
 				</div>
-				<div id="about" className="text-3xl">
+
+				{/* About Section */}
+				<div id="about" className="text-3xl font-headline">
 					<About />
 				</div>
-				<div id="projects" className="text-3xl">
+
+				{/* Projects Section */}
+				<div id="projects" className="text-3xl font-headline">
 					<Projects />
 				</div>
-				<div id="contact" className="text-3xl">
+
+				{/* Contact Section */}
+				<div id="contact" className="text-3xl font-headline">
 					<Contact />
 				</div>
-				<div>
-					<Footer />
-				</div>
+
+				{/* Footer */}
+				<Footer />
 			</div>
 		</div>
 	);

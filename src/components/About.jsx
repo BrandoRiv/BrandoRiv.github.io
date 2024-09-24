@@ -68,15 +68,16 @@ const About = () => {
 							About Me
 						</h2>
 						<p className="mt-4 text-lg">{about}</p>
-
-						{/* Disciplines and Interests in two-column grid */}
-						<div className="mt-6 grid grid-cols-2 gap-8">
+						<div className="mt-6 grid grid-cols-[1.5fr_1fr] gap-8">
 							{/* Disciplines */}
 							<div>
 								<h4 className="text-2xl font-bold">Disciplines</h4>
 								<div className="mt-2">
 									{aboutdisciplines.map((discipline, index) => (
-										<p key={index} className="text-base italic">
+										<p
+											key={index}
+											className="text-base italic whitespace-nowrap overflow-hidden text-ellipsis"
+										>
 											{discipline}
 										</p>
 									))}
@@ -88,7 +89,10 @@ const About = () => {
 								<h4 className="text-2xl font-bold">Interests</h4>
 								<div className="mt-2">
 									{interests.map((interest, index) => (
-										<p key={index} className="text-base italic">
+										<p
+											key={index}
+											className="text-base italic whitespace-nowrap overflow-hidden text-ellipsis"
+										>
 											{interest}
 										</p>
 									))}

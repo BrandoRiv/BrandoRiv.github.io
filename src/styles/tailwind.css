@@ -18,7 +18,9 @@ body {
 	padding-bottom: env(safe-area-inset-bottom);
 	padding-left: env(safe-area-inset-left);
 	padding-right: env(safe-area-inset-right);
-	background-color: #000000;
+	background-color: rgb(29, 29, 29); /* Updated background color */
+	color: rgb(209, 202, 194); /* Updated text color */
+	font-family: "Nunito Sans", sans-serif; /* Updated font for body */
 }
 
 html {
@@ -27,4 +29,23 @@ html {
 
 ::-webkit-scrollbar {
 	display: none;
+}
+
+/* Headline Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Halant", serif; /* Updated font for headlines */
+}
+
+/* Accent Colors */
+.accent1 {
+	color: rgb(186, 135, 92); /* Accent 1 */
+}
+
+.accent2 {
+	color: rgb(89, 107, 95); /* Accent 2 */
 }

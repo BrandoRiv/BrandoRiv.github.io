@@ -5,8 +5,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				headline: ['"Neue Haas Grotesk Display Pro"', "sans-serif"],
-				body: ['"Urbane"', "serif"],
+				headline: ['"Halant"', "serif"],
+				body: ['"Nunito Sans"', "sans-serif"],
 			},
 		},
 	},
